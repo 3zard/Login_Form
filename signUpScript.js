@@ -17,7 +17,7 @@ document.getElementById("form__signUp").addEventListener("submit", function(even
         alert('Please enter Repeat Password')
     }
     else {
-        if (enteredPassword !== repeatPassword) {
+        if (enteredPassword !== enteredRepeatPassword) {
             alert('Repeat Password is incorrect')
             //Reset lại ô repeatPassword
         }
@@ -27,8 +27,8 @@ document.getElementById("form__signUp").addEventListener("submit", function(even
             }
             else {
                 let newAccount = {
-                    username: username,
-                    password: password
+                    username: enteredUsername,
+                    password: enteredPassword
                 };
                 accounts.push(newAccount);
                 localStorage.setItem('accounts', JSON.stringify(accounts))

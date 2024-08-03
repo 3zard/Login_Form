@@ -6,6 +6,5 @@ document.getElementById("logOut__button").addEventListener('click', function() {
 
 window.addEventListener('load', function() {
     const user = JSON.parse(localStorage.getItem('loggedInUser')) || JSON.parse(sessionStorage.getItem('loggedInUser'));
-    console.log(user)
     this.document.getElementById("helloUser").innerText = `Hello ${user.username}`;
 })
